@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labesny - Your AI Personal Stylist</title>
+  <meta
+    name="description"
+    content="Labesny analyzes your body and style to suggest the perfect clothing combinations from top brands. Download the app today."
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+<header class="glass-nav" id="navbar">
+  <div class="container">
+    <div class="nav-row">
+      <div class="brand" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        <img src="logo-dark.png" alt="Labesny Logo" class="brand-logo" />
+        <span class="brand-name">Labesny</span>
+      </div>
+
+      <nav class="desktop-nav">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#download" class="nav-cta">Join The Waitlist</a>
+        <div class="nav-actions">
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <button class="mobile-menu-btn" id="menuToggle" aria-label="Menu" type="button">
+    <i class="fas fa-bars"></i>
+  </button>
+</div>
+      </nav>
+
+      <button class="mobile-menu-btn" id="menuToggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it Works</a>
+      <a href="#download">Join The Waitlist</a>
+    </nav>
+  </div>
+</header>
+
+  <section class="hero-gradient hero-section">
+    <div class="hero-blob blob-right"></div>
+    <div class="hero-blob blob-left"></div>
+
+    <div class="container hero-content">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            AI-Powered Fashion Intelligence
+          </div>
+
+          <h1>
+            Your Personal
+            <span class="gradient-text">Stylist</span>
+            in Your Pocket.
+          </h1>
+
+          <p>
+            Snap a photo. Labesny analyzes your build and skin tone to suggest
+            perfectly matched outfits from your favorite brands. Tailored for
+            your style, the weather, and the occasion.
+          </p>
+
+          <div class="store-buttons">
+<a href="#download" class="store-btn store-btn-light">
+  <i class="fab fa-apple"></i>
+  <div>
+    <span>Coming Soon</span>
+    <strong>App Store</strong>
+  </div>
+</a>
+
+<a href="#download" class="store-btn store-btn-dark">
+  <i class="fab fa-google-play"></i>
+  <div>
+    <span>Coming Soon</span>
+    <strong>Google Play</strong>
+  </div>
+</a>
+          </div>
+        </div>
+
+        <div class="hero-phone-wrap">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="phone-top">
+                <div class="phone-top-icon">
+                  <i class="fas fa-camera"></i>
+                </div>
+                <h3>Hello, Omar</h3>
+                <p>Perfect fits for 24°C Sunny</p>
+              </div>
+
+              <div class="phone-body">
+                <div class="phone-label">Suggested Combo</div>
+
+                <div class="suggestion-card">
+                  <div class="suggestion-icon">
+                    <i class="fas fa-tshirt"></i>
+                  </div>
+                  <div>
+                    <div class="suggestion-title">Zara Linen Top</div>
+                    <div class="suggestion-subtitle">Matches your skin tone</div>
+                  </div>
+                </div>
+
+                <div class="suggestion-card">
+                  <div class="suggestion-icon">
+                    <i class="fas fa-ruler"></i>
+                  </div>
+                  <div>
+                    <div class="suggestion-title">H&amp;M Wide Trousers</div>
+                    <div class="suggestion-subtitle">Perfect for your build</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card floating-left">
+            <div class="floating-icon green">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div>
+              <div class="floating-label">Weather Match</div>
+              <div class="floating-title">Summer Casual</div>
+            </div>
+          </div>
+
+          <div class="floating-card floating-right">
+            <div class="floating-icon indigo">
+              <i class="fas fa-magic"></i>
+            </div>
+            <div>
+              <div class="floating-label">New Drop</div>
+              <div class="floating-title">Matches Your Style</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Core Features</h2>
+        <h3>Intelligent styling tailored to exactly who you are.</h3>
+        <p>
+          Labesny uses advanced machine learning to act as your pocket fashion
+          consultant. We don't just show clothes; we build your wardrobe.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon indigo-bg">
+            <i class="fas fa-camera-retro"></i>
+          </div>
+          <h4>AI Body &amp; Tone Scan</h4>
+          <p>
+            Take a quick picture and let Labesny map your body build and skin
+            tone to guarantee colors and cuts that flatter you naturally.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon purple-bg">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h4>Smart Combinations</h4>
+          <p>
+            Stop guessing what goes together. Get complete, stylish outfit
+            combinations from various brands designed specifically for your look.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon sky-bg">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <h4>Weather &amp; Occasion</h4>
+          <p>
+            Whether it's a rainy work commute or a sunny weekend brunch,
+            Labesny cross-references the forecast and your calendar to suggest
+            the right fit.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon pink-bg">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h4>Learns Your Taste</h4>
+          <p>
+            The more you use it, the smarter it gets. Labesny learns your
+            favorite brands and preferred fits to refine future recommendations.
+          </p>
+        </div>
+
+        <div class="feature-card feature-card-wide">
+          <div class="wide-feature">
+            <div class="wide-feature-text">
+              <div class="feature-icon emerald-bg">
+                <i class="fas fa-bell"></i>
+              </div>
+              <h4>Real-time Style Alerts</h4>
+              <p>
+                Never miss a drop. If a new product is published that perfectly
+                matches your body profile and style preferences, Labesny will
+                notify you instantly.
+              </p>
+            </div>
+
+            <div class="alert-card">
+              <div class="alert-dot"></div>
+              <div>
+                <p class="alert-label">NEW ALERT</p>
+                <p class="alert-text">
+                  Massimo Dutti just dropped a blazer that perfectly complements
+                  your skin tone!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="how-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>How it Works</h2>
+        <h3>Three simple steps to smarter outfits.</h3>
+        <p>
+          No endless scrolling. No random guesses. Just a cleaner way to find
+          what actually suits you.
+        </p>
+      </div>
+
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-number">1</div>
+          <h4>Create your profile</h4>
+          <p>
+            Answer a few style questions so Labesny understands your taste,
+            favorite colors, and fashion preferences.
+          </p>
+        </div>
+
+        <div class="how-card">
+          <div class="how-number">2</div>
+          <h4>Upload your photo</h4>
+          <p>
+            Let the AI analyze your body build and skin tone to identify cuts
+            and shades that work best for you.
+          </p>
+        </div>
+
+        <div class="how-card">
+          <div class="how-number">3</div>
+          <h4>Get outfit recommendations</h4>
+          <p>
+            Receive full outfit combinations based on your style, current
+            weather, and occasion, pulled from top brands.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section id="download" class="download-section">
+  <div class="download-pattern"></div>
+
+  <div class="container download-wrap">
+    <div class="download-card">
+      <img src="logo-dark.png" alt="Labesny Icon" class="download-logo" />
+
+      <h2>Join the Labesny Waitlist.</h2>
+      <p>
+        Be the first to try Labesny when we launch. Get early access, product
+        updates, and first priority when the app goes live.
+      </p>
+
+      <form id="waitlistForm" class="waitlist-form">
+        <div class="waitlist-row">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+            required
+          />
+        </div>
+
+        <button type="submit" class="waitlist-btn">
+          Join Waitlist
+        </button>
+
+        <p id="waitlistMessage" class="waitlist-message"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<!--
+  <section id="download" class="download-section">
+    <div class="download-pattern"></div>
+
+    <div class="container download-wrap">
+      <div class="download-card">
+        <img src="assets/logo.png" alt="Labesny Icon" class="download-logo" />
+
+        <h2>Upgrade Your Wardrobe Today.</h2>
+        <p>
+          Join thousands of users who have revolutionized the way they dress.
+          Stop searching and let Labesny find the perfect clothes for you. Free
+          to download.
+        </p>
+
+        <div class="download-buttons">
+          <button class="download-btn light">
+            <i class="fab fa-apple"></i>
+            <div>
+              <span>Download on the</span>
+              <strong>App Store</strong>
+            </div>
+          </button>
+
+          <button class="download-btn dark">
+            <i class="fab fa-google-play"></i>
+            <div>
+              <span>GET IT ON</span>
+              <strong>Google Play</strong>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="logo-dark.png" alt="Labesny Logo" class="footer-logo" />
+          <span>Labesny</span>
+        </div>
+
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Labesny. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  const themeToggle = document.getElementById("themeToggle");
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileNav = document.getElementById("mobileNav");
+  const waitlistForm = document.getElementById("waitlistForm");
+  const waitlistMessage = document.getElementById("waitlistMessage");
+  const navbar = document.getElementById("navbar");
+  const logoImages = document.querySelectorAll(".brand-logo, .download-logo, .footer-logo");
+
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function updateThemeIcon(isDark) {
+    if (!themeToggle) return;
+    const icon = themeToggle.querySelector("i");
+    if (!icon) return;
+    icon.className = isDark ? "fas fa-sun" : "fas fa-moon";
+  }
+
+  function updateLogos(isDark) {
+    const logoPath = isDark ? "logo.png" : "logo-dark.png";
+
+    logoImages.forEach((img) => {
+      img.src = logoPath;
+    });
+  }
+
+  function applyTheme(theme) {
+    const isDark = theme === "dark";
+    document.body.classList.toggle("dark-mode", isDark);
+    updateThemeIcon(isDark);
+    updateLogos(isDark);
+  }
+
+  function getPreferredTheme() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      return savedTheme;
+    }
+    return systemPrefersDark.matches ? "dark" : "light";
+  }
+
+  applyTheme(getPreferredTheme());
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      const currentTheme = localStorage.getItem("theme");
+      const activeDark = document.body.classList.contains("dark-mode");
+
+      let nextTheme;
+
+      if (currentTheme === "light") {
+        nextTheme = "dark";
+      } else if (currentTheme === "dark") {
+        nextTheme = "light";
+      } else {
+        nextTheme = activeDark ? "light" : "dark";
+      }
+
+      localStorage.setItem("theme", nextTheme);
+      applyTheme(nextTheme);
+    });
+  }
+
+  systemPrefersDark.addEventListener("change", function () {
+    const savedTheme = localStorage.getItem("theme");
+    if (!savedTheme) {
+      applyTheme(systemPrefersDark.matches ? "dark" : "light");
+    }
+  });
+
+  window.addEventListener("scroll", function () {
+    if (!navbar) return;
+
+    if (window.scrollY > 20) {
+      navbar.classList.add("nav-shadow");
+    } else {
+      navbar.classList.remove("nav-shadow");
+    }
+  });
+
+  if (menuToggle && mobileNav) {
+    menuToggle.addEventListener("click", function () {
+      mobileNav.classList.toggle("show");
+    });
+
+    document.querySelectorAll(".mobile-nav a").forEach((link) => {
+      link.addEventListener("click", function () {
+        mobileNav.classList.remove("show");
+      });
+    });
+  }
+
+  if (waitlistForm && waitlistMessage) {
+    waitlistForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(waitlistForm);
+      const name = formData.get("name")?.trim();
+      const email = formData.get("email")?.trim();
+
+      if (!name || !email) {
+        waitlistMessage.textContent = "Please fill in all fields.";
+        return;
+      }
+
+      waitlistMessage.textContent = "Submitting...";
+
+      try {
+        const response = await fetch("https://formspree.io/f/xdawpgag", {
+          method: "POST",
+          headers: {
+            Accept: "application/json"
+          },
+          body: formData
+        });
+
+        if (response.ok) {
+          waitlistMessage.textContent = "You're on the waitlist. We'll keep you posted.";
+          waitlistForm.reset();
+        } else {
+          waitlistMessage.textContent = "Something went wrong. Please try again.";
+        }
+      } catch (error) {
+        waitlistMessage.textContent = "Network error. Please try again.";
+      }
+    });
+  }
+</script>
+</body>
+</html>
