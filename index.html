@@ -464,17 +464,23 @@
     }
   });
 
-  if (menuToggle && mobileNav) {
-    menuToggle.addEventListener("click", function () {
-      mobileNav.classList.toggle("show");
-    });
+ if (menuToggle && mobileNav) {
+  menuToggle.addEventListener("click", function () {
+    const isOpen = mobileNav.classList.toggle("show");
+    menuToggle.classList.toggle("active", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
 
-    document.querySelectorAll(".mobile-nav a").forEach((link) => {
-      link.addEventListener("click", function () {
-        mobileNav.classList.remove("show");
-      });
+  document.querySelectorAll(".mobile-nav a").forEach((link) => {
+    link.addEventListener("click", function () {
+      mobileNav.classList.remove("show");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open menu");
     });
-  }
+  });
+}
 
   if (waitlistForm && waitlistMessage) {
     waitlistForm.addEventListener("submit", async function (e) {
