@@ -1,37 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" id="root">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Redora Estates - Luxury Real Estate Properties in Hurghada, Red Sea Riviera">
+  <meta name="theme-color" content="#0B0A08">
+  <title>Redora Estates — Luxury Real Estate</title>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Redora Estates — Luxury Real Estate</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- Your CSS -->
-
-<link rel="stylesheet" href="styles.css">
-
-<!-- Three.js -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-<!-- Your JS -->
-
-<script defer src="script.js"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
  
 <div id="cd"></div><div id="cr"></div>
  
 <!-- ══ NAV ══════════════════════════════════════ -->
-<nav class="nav" id="nav">
-  <a href="#" class="n-brand">
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="n-brand" aria-label="Redora Estates Home">
     <div class="n-hex">
-      <svg viewBox="0 0 32 32" fill="none">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <polygon points="16,2 30,9.5 30,22.5 16,30 2,22.5 2,9.5" stroke="#C9A96E" stroke-width="1" fill="none"/>
         <polygon points="16,7 25,12 25,20 16,25 7,20 7,12" stroke="#C9A96E" stroke-width=".5" fill="none" opacity=".4"/>
         <circle cx="16" cy="16" r="2.2" fill="#C9A96E"/>
@@ -39,15 +28,20 @@
     </div>
     <span class="n-name" data-en="REDORA" data-ar="ريدورا">REDORA</span>
   </a>
-  <div class="n-r">
+  <button class="n-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="n-r" id="nav-menu">
     <nav class="n-links">
       <a href="#listings" data-en="Properties" data-ar="العقارات">Properties</a>
       <a href="#showcase" data-en="Portfolio" data-ar="المحفظة">Portfolio</a>
       <a href="#about" data-en="About" data-ar="عن الشركة">About</a>
       <a href="#contact" data-en="Contact" data-ar="التواصل">Contact</a>
     </nav>
-    <button class="lbtn on" onclick="setLang('en')" id="ben">EN</button>
-    <button class="lbtn" onclick="setLang('ar')" id="bar">AR</button>
+    <div class="n-langs">
+      <button class="lbtn on" onclick="setLang('en')" id="ben" aria-label="English">EN</button>
+      <button class="lbtn" onclick="setLang('ar')" id="bar" aria-label="العربية">AR</button>
+    </div>
   </div>
 </nav>
  
@@ -61,11 +55,11 @@
     </h1>
     <p class="h-sub" data-en="Extraordinary properties along the Red Sea Riviera, curated for those who refuse to compromise." data-ar="عقارات استثنائية على ريفييرا البحر الأحمر، مختارة لمن يرفضون التنازل.">Extraordinary properties along the Red Sea Riviera, curated for those who refuse to compromise.</p>
     <div class="h-cta">
-      <button class="btn-prim" onclick="document.getElementById('listings').scrollIntoView({behavior:'smooth'})">
+      <button class="btn-prim" onclick="document.getElementById('listings').scrollIntoView({behavior:'smooth'})" aria-label="Explore Properties">
         <span data-en="Explore Properties" data-ar="استكشف العقارات">Explore Properties</span>
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-en="Enquire Now" data-ar="استفسر الآن">Enquire Now</button>
+      <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-en="Enquire Now" data-ar="استفسر الآن" aria-label="Enquire Now">Enquire Now</button>
     </div>
     <div class="h-scroll">
       <span data-en="Scroll to discover" data-ar="انزل للاكتشاف">Scroll to discover</span>
@@ -260,25 +254,25 @@
       </div>
     </div>
     <div class="rvr" id="cf-wrap">
-      <div id="cform">
+      <form id="cform" onsubmit="submitForm(event)">
         <div class="cf-pair">
-          <div class="cf-f"><label class="cf-l" data-en="First Name" data-ar="الاسم الأول">First Name</label><input class="cf-in" id="cf-fn" placeholder="—"></div>
-          <div class="cf-f"><label class="cf-l" data-en="Last Name" data-ar="الاسم الأخير">Last Name</label><input class="cf-in" id="cf-ln" placeholder="—"></div>
+          <div class="cf-f"><label class="cf-l" for="cf-fn" data-en="First Name" data-ar="الاسم الأول">First Name</label><input class="cf-in" id="cf-fn" type="text" placeholder="—" required aria-required="true"></div>
+          <div class="cf-f"><label class="cf-l" for="cf-ln" data-en="Last Name" data-ar="الاسم الأخير">Last Name</label><input class="cf-in" id="cf-ln" type="text" placeholder="—" required aria-required="true"></div>
         </div>
-        <div class="cf-f"><label class="cf-l">Email</label><input class="cf-in" id="cf-em" placeholder="—" type="email"></div>
-        <div class="cf-f"><label class="cf-l" data-en="Phone" data-ar="رقم الهاتف">Phone</label><input class="cf-in" id="cf-ph" placeholder="—"></div>
+        <div class="cf-f"><label class="cf-l" for="cf-em">Email</label><input class="cf-in" id="cf-em" type="email" placeholder="—" required aria-required="true"></div>
+        <div class="cf-f"><label class="cf-l" for="cf-ph" data-en="Phone" data-ar="رقم الهاتف">Phone</label><input class="cf-in" id="cf-ph" type="tel" placeholder="—" aria-required="true"></div>
         <div class="cf-f">
-          <label class="cf-l" data-en="I'm interested in" data-ar="أنا مهتم بـ">I'm interested in</label>
-          <select class="cf-sel">
+          <label class="cf-l" for="cf-int" data-en="I'm interested in" data-ar="أنا مهتم بـ">I'm interested in</label>
+          <select class="cf-sel" id="cf-int">
             <option data-en="Sea View Residence" data-ar="شقة إطلالة بحرية">Sea View Residence</option>
             <option data-en="Private Beach Villa" data-ar="فيلا شاطئية خاصة">Private Beach Villa</option>
             <option data-en="Resort Investment" data-ar="استثمار منتجعي">Resort Investment</option>
             <option data-en="General Enquiry" data-ar="استفسار عام">General Enquiry</option>
           </select>
         </div>
-        <div class="cf-f"><label class="cf-l" data-en="Message" data-ar="رسالتك">Message</label><textarea class="cf-ta" id="cf-msg" rows="3" placeholder="—"></textarea></div>
-        <button class="btn-submit" onclick="submitForm()"><span data-en="Send Enquiry" data-ar="إرسال الاستفسار">Send Enquiry</span></button>
-      </div>
+        <div class="cf-f"><label class="cf-l" for="cf-msg" data-en="Message" data-ar="رسالتك">Message</label><textarea class="cf-ta" id="cf-msg" rows="4" placeholder="—" aria-describedby="msg-hint"></textarea><small id="msg-hint" class="cf-hint" data-en="Optional" data-ar="اختياري">Optional</small></div>
+        <button class="btn-submit" type="submit" aria-label="Send enquiry form"><span data-en="Send Enquiry" data-ar="إرسال الاستفسار">Send Enquiry</span></button>
+      </form>
     </div>
   </div>
 </section>
